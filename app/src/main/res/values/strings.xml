@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculator With Intent To Different Activities</string>
+    <string name="btn_add">ADD</string>
+    <string name="btn_subtract">Subtract</string>
+    <string name="btn_multiply">Multiply</string>
+    <string name="btn_divide">Divide</string>
+</resources>

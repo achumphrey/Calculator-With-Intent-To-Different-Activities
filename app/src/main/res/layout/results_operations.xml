@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tv_display_text"
+              android:text="The result is: "
+              android:textColor="#0D2FF0"
+              android:textSize="25sp"
+              android:textStyle="bold"
+              android:layout_marginHorizontal="20dp"
+              android:gravity="center_horizontal"
+              android:layout_gravity="center"
+
+
+    />
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tv_result"
+              android:text="some Number "
+              android:textColor="#ffffff"
+              android:textSize="25sp"
+              android:background="#090707"
+              android:textStyle="bold"
+              android:gravity="center_horizontal"
+              android:layout_gravity="center"
+
+
+
+
+    />
+
+</LinearLayout>
