@@ -4,12 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
-
-
 
     override fun onClick(view: View) {
 
@@ -17,14 +15,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var a = 0
         var b = 0
         var intent: Intent? = null
-     //   val INTENT_MESSAGE = "message"
+
 
         if (et_number_one.text.toString().isEmpty() || et_number_two.text.toString().isEmpty()) {
 
             num = "Enter valid real numbers!"
-
             tv_error_message.text = num
-
 
         } else {
             a = Integer.parseInt(et_number_one.text.toString())
@@ -33,22 +29,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             when (view!!.id) {
 
                 R.id.btn_add -> {
-                    num = (a + b).toString()
+         /*         num = (a + b).toString()
                     intent = Intent(this, AddActivity::class.java)
-                    intent.putExtra("message", num)
+                    intent.putExtra("message", num)*/
+
+                    intent = Intent(this, AddActivity::class.java)
+
 
                 }
 
                 R.id.btn_subtract -> {
-                    num = (a - b).toString()
+                   /* num = (a - b).toString()
                     intent = Intent(this, SubtractActivity::class.java)
-                    intent.putExtra("message", num)
+                    intent.putExtra("message", num)*/
+
+                    intent = Intent(this, SubtractActivity::class.java)
                 }
 
                 R.id.btn_multiply -> {
-                    num = (a * b).toString()
+                    /*num = (a * b).toString()
                     intent = Intent(this, MultiplyActivity::class.java)
-                    intent.putExtra("message", num)
+                    intent.putExtra("message", num)*/
+
+                    intent = Intent(this, MultiplyActivity::class.java)
                 }
 
                 R.id.btn_divide -> {
@@ -61,12 +64,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         num = String.format("%.2f", (a / db))
                     }
 
+            /*      intent = Intent(this, DivideActivity::class.java)
+                    intent.putExtra("message", num)*/
+
                     intent = Intent(this, DivideActivity::class.java)
-                    intent.putExtra("message", num)
 
                 }
             }//END WHEN
-
+            intent!!.putExtra(Constants.INTENT_MESSAGE_1, a)
+            intent.putExtra(Constants.INTENT_MESSAGE_2, b)
             startActivity(intent)
         //    tv_error_message.text = num
         }//END ELSE

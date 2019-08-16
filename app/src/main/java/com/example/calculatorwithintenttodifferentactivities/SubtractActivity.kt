@@ -11,8 +11,14 @@ class SubtractActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.results_operations)
 
-        var intent : Intent = getIntent()
-        tv_result.text = intent.getStringExtra("message")
+    /*    var intent : Intent = getIntent()
+        tv_result.text = intent.getStringExtra("message")*/
+
+        val a = intent.getIntExtra(Constants.INTENT_MESSAGE_1, 0)
+        val b = intent.getIntExtra(Constants.INTENT_MESSAGE_2, 0)
+
+        tv_result.text = (a - b).toString()
+
 
     }
 }

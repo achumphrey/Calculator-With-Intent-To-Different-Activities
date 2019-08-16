@@ -11,8 +11,23 @@ class DivideActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.results_operations)
 
-        var intent : Intent = getIntent()
-        tv_result.text = intent.getStringExtra("message")
+     /*   var intent : Intent = getIntent()
+        tv_result.text = intent.getStringExtra("message")*/
+
+        val a = intent.getIntExtra(Constants.INTENT_MESSAGE_1, 0)
+        val b = intent.getIntExtra(Constants.INTENT_MESSAGE_2, 0)
+
+        var db: Double = b.toDouble()
+
+        var num: String = ""
+
+        if (db.equals(0.0)) {
+            num = "Er!"
+        } else {
+            num = String.format("%.2f", (a / db))
+        }
+
+        tv_result.text = num
 
     }
 }

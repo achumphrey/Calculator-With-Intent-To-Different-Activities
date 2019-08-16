@@ -23,7 +23,7 @@
               android:layout_marginLeft="@dimen/margin_30dp"
               android:textSize="20sp"
               android:textStyle="bold"
-              android:textColor="#132B01"
+              android:textColor="#F1081C"
               android:layout_marginTop="@dimen/margin_30dp"
     />
 
